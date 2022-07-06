@@ -1,4 +1,3 @@
-import { formatDate } from '@angular/common';
 import { Component, Inject, LOCALE_ID, OnInit } from '@angular/core';
 
 @Component({

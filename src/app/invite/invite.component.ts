@@ -4,7 +4,6 @@ import { FormControl, Validators } from '@angular/forms';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set } from 'firebase/database';
 import { environment } from 'src/environments/environment';
-import { ListService } from '../service/list.service';
 
 @Component({
   selector: 'app-invite',
