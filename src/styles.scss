@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(0, 0, 0, 0.603)
+}
+
+h1{
+  font-family: 'Great vibes', cursive;
+  font-size: 50px;
+  color: #000;
+  margin: 100px 0 0 0;
+}
+
+h2{
+  font-family: 'Great vibes', cursive;
+  font-size: 34px;
+  color: #FFC700;
+  margin: 0 auto;
+}
+
+h3{
+  font-family: 'Great vibes', cursive;
+  font-size: 25px;
+  color: #000;
+  margin: 25px 0 0 0;
+}
+
+h4{
+  font-family: 'Great vibes', cursive;
+  font-size: 25px;
+  color: #000;
+  margin: 27px 0 0 0;
+}
+
+p{
+  font-size: 12px;
+  margin: 10px;
+}
+
+@media (min-width: 490px) {
+  h1{
+    font-size: 50px;
+  }
+
+  h2{
+    font-size: 50px;
+  }
+
+  h3{
+    font-size: 35px;
+  }
+
+  h4{
+    font-size: 25px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+  }
+  @keyframes slideInUp {
+  0% {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+
+
+
+

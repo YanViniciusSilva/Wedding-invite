@@ -1,0 +1,37 @@
+
+.gallery-lightbox-container{
+  position: fixed;
+  display: inline-block;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  filter: brightness(0.5);
+
+  .gallery{
+    line-height: 0;
+    column-count: 3;
+    gap: 0;
+
+    @media (min-width: 770px){
+      column-count: 6;
+      grid-template-rows: 2;
+    }
+
+    .gallery-img{
+      max-height: auto;
+      overflow: hidden;
+
+      img{
+        position: relative;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.invite-interface{
+  display: flex;
+  opacity: 0.99;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  &_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media (min-width: 490px) {
+      flex-direction: row;
+    }
+
+    .name{
+      color: #fff;
+      font-family: 'Great vibes', cursive;
+      font-size: 80px;
+    }
+
+    &_heart{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto 20px;
+
+      &_content{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        color: #343434;
+        text-align: center;
+        margin: auto;
+        line-height: 20px;
+        margin-top: 50px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 14px;
+
+        #timer{
+          font-size: 20px;
+          line-height: 30px;
+
+          span{
+            margin: 3px;
+          }
+        }
+      }
+
+      #heart{
+        margin-top: -70px;
+        width: 200px;
+        height: 191px;
+      }
+
+      #lock{
+        width: 120px;
+        height: 120px;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
+

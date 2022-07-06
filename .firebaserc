@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "wedding-inviters-list": {
+      "hosting": {
+        "wedding-invitation": [
+          "wedding-inviters-list"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "wedding-inviters-list"
+  }
+}
