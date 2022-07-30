@@ -10,12 +10,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InviteHomeComponent } from './invite-home/invite-home.component';
 import { InviteComponent } from './invite/invite.component';
+import { NoPartyInviteComponent } from './no-party-invite/no-party-invite.component';
+import { NoPartyInviteHomeComponent } from './no-party-invite-home/no-party-invite-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InviteHomeComponent,
     InviteComponent,
+    NoPartyInviteComponent,
+    NoPartyInviteHomeComponent,
 
   ],
   imports: [

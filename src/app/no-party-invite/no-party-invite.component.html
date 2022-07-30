@@ -1,0 +1,106 @@
+
+<section class="invite slideInUp">
+  <div class="invite_informations">
+    <h1>Casamento</h1>
+    <h2>Você está convidado!</h2>
+
+    <div *ngFor="let date of dates">
+      <p>{{date.info}}</p>
+      <span>{{date.hr}}</span>
+    </div>
+
+    <h3>Endereços</h3>
+    <h4>Cerimônia</h4>
+
+    <p>
+      R. Marina, 852<br/> Campestre, Santo André - SP,<br/> 09070-510
+    </p>
+
+    <div id="maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.996179213351!2d-46.55034038563826!3d-23.64030787039622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce42d0f01a13e7%3A0x38f18cefefa02d87!2sR.%20Marina%2C%20852%20-%20Campestre%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009070-400!5e0!3m2!1spt-BR!2sbr!4v1656450674764!5m2!1spt-BR!2sbr"
+        width="100%"
+        height="100%"
+        style="border:0;margin-top: 13px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- <h4>Festa</h4>
+    <p>
+      R. Espanha, 428<br/> Parque das Nações, Santo André - SP,<br/> 09210-010
+    </p>
+
+    <div id="maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.093451918616!2d-46.5276648856385!3d-23.636824070267092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce42a4d0a7895f%3A0x10d020e21532c76a!2sR.%20Espanha%2C%20428%20-%20Parque%20das%20Na%C3%A7%C3%B5es%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009210-010!5e0!3m2!1spt-BR!2sbr!4v1656450937470!5m2!1spt-BR!2sbr"
+        width="100%"
+        height="100%"
+        style="border:0;margin-top: 13px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div> -->
+
+    <h3 style="margin-top: 65px;">Mateus 19:06</h3>
+    <p class="text">
+      “De modo que não são mais dois, mas uma <br/>só carne. Portanto o que Deus pôs sob o<br/> mesmo jugo o homem não deve separar.”
+    </p>
+
+    <p
+      style="margin-top: 34px;"
+      *ngIf="!successMessage"
+    >
+      confirmar sua presença? Ficaremos muito felizes<br/> de te ver  nessa ocasião tão especial para nós!
+    </p>
+
+    <form
+      (submit)="writeInvitedName()"
+      style="display: flex; flex-direction: column;"
+    >
+      <input
+        type="text"
+        placeholder="Digite seu nome e confirme!"
+        [formControl]="name"
+        *ngIf="!successMessage"
+      />
+      <button
+        *ngIf="!successMessage"
+        type="submit"
+        [disabled]="this.name.invalid"
+        class="btn"
+        style="max-width: 192px; margin: 30px auto 0 auto;"
+      ><b>Claro estarei lá!</b>
+      </button>
+    </form>
+
+    <p
+      class="fadeIn"
+      id="confirmation"
+      *ngIf="successMessage"
+      style="width:80%; margin-top: 20px;"
+    >
+      Agradecemos a confirmação, estamos ansiosos pra nos vermos no grande dia!
+    </p>
+
+
+    <p
+      style="margin: 34px;"
+      id="presents-text"
+    >
+      Gostaria de ajudar o novo casal com um presente?
+      Não é obrigatório comprar algo para poder estar na
+      cerimônia mas seria de grande ajuda, agradecemos desde já!
+    </p>
+
+    <button
+      style="margin: 0 0 38px 0;"
+      (click)="redirect()"
+    >
+      <b>Lista de presentes</b>
+    </button>
+  </div>
+</section>
